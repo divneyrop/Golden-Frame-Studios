@@ -5,10 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Golden Frame Studios | Photography & Visual Storytelling in Kenya</title>
-  <meta name="description"
-    content="Golden Frame Studios captures weddings, portraits, celebrations, events and brand stories with warmth and style. Photography rooted in Kenya, made to be remembered.">
-  <meta name="keywords"
-    content="Golden Frame Studios, Kenya photography, wedding photography, portrait photography, event photography, brand photography, Kenyan visual storytelling">
+  <meta name="description" content="Golden Frame Studios captures weddings, portraits, celebrations, events and brand stories with warmth and style. Photography rooted in Kenya, made to be remembered.">
+  <meta name="keywords" content="Golden Frame Studios, Kenya photography, wedding photography, portrait photography, event photography, brand photography, Kenyan visual storytelling">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -17,9 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +26,177 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .index-page .hero {
+      padding-top: clamp(4rem, 8vw, 7rem);
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .index-page .hero .col-lg-6 {
+      max-width: 850px;
+    }
+
+    .index-page .hero h2 {
+      font-size: clamp(2.4rem, 5vw, 4.65rem);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+    }
+
+    .index-page .hero h2 span {
+      display: block;
+    }
+
+    .index-page .hero h2 .underlight {
+      color: var(--accent-color);
+    }
+
+    .index-page .hero p {
+      max-width: 735px;
+      margin: 0 auto 2rem;
+      line-height: 1.85;
+    }
+
+    .index-page .home-gallery {
+      padding-top: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+    .index-page .home-gallery-container {
+      padding-left: clamp(1rem, 4vw, 4.5rem);
+      padding-right: clamp(1rem, 4vw, 4.5rem);
+    }
+
+    .index-page .home-gallery-heading {
+      max-width: 1600px;
+      margin: 0 auto 2.25rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .index-page .home-gallery-eyebrow {
+      color: var(--accent-color);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      margin: 0 0 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .index-page .home-gallery-heading h2 {
+      color: var(--heading-color);
+      font-family: var(--heading-font);
+      font-size: clamp(2rem, 3.5vw, 3.35rem);
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    .index-page .home-gallery-heading > p {
+      max-width: 490px;
+      margin: 0 0 0.2rem;
+      line-height: 1.8;
+    }
+
+    .index-page .home-gallery-grid > [class*="col-"] {
+      display: flex;
+    }
+
+    .index-page .home-gallery-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .index-page .home-gallery-card .gallery-item {
+      height: auto;
+      overflow: hidden;
+      background: var(--surface-color);
+    }
+
+    .index-page .home-gallery-card .gallery-item img {
+      display: block;
+      width: 100%;
+      height: clamp(225px, 25vw, 325px);
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+
+    .index-page .home-gallery-card--feature .gallery-item img {
+      height: clamp(300px, 37vw, 475px);
+    }
+
+    .index-page .home-gallery-card:hover .gallery-item img {
+      transform: scale(1.035);
+    }
+
+    .index-page .home-gallery-caption {
+      padding: 1.1rem 0 0.25rem;
+    }
+
+    .index-page .home-gallery-caption span {
+      color: var(--accent-color);
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .index-page .home-gallery-caption h3 {
+      color: var(--heading-color);
+      font-family: var(--heading-font);
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      line-height: 1.25;
+      margin: 0.4rem 0 0;
+    }
+
+    .index-page .home-gallery-footer {
+      margin-top: 2.75rem;
+      text-align: center;
+    }
+
+    .index-page .home-gallery-footer a {
+      align-items: center;
+      border-bottom: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      display: inline-flex;
+      font-size: 0.78rem;
+      font-weight: 600;
+      gap: 0.65rem;
+      letter-spacing: 0.1em;
+      padding: 0 0 0.55rem;
+      text-transform: uppercase;
+    }
+
+    .index-page .home-gallery-footer a:hover {
+      color: var(--heading-color);
+      border-color: var(--heading-color);
+    }
+
+    @media (max-width: 767.98px) {
+      .index-page .home-gallery-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .index-page .home-gallery-card--feature .gallery-item img {
+        height: 340px;
+      }
+
+      .index-page .home-gallery-card .gallery-item img {
+        height: 275px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .index-page .home-gallery-card .gallery-item img {
+        transition: none;
+      }
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: PhotoFolio
@@ -56,8 +223,7 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">Our Story</a></li>
-          <li class="dropdown"><a href="gallery.html"><span>Portfolio</span> <i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="gallery.html"><span>Portfolio</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="gallery.html">Weddings &amp; Celebrations</a></li>
               <li><a href="gallery.html">Portraits &amp; Families</a></li>
@@ -91,12 +257,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-            <h2><span>Every story deserves</span> <span class="underlight">a Golden Frame.</span> <span>Photography
-                rooted in Kenya, made to be remembered.</span></h2>
-            <p>We capture the moments that become part of your story — from intimate portraits and family celebrations
-              to weddings, events, and brand campaigns. Our photography brings together authentic Kenyan settings,
-              genuine emotion, and thoughtful visual storytelling to create images that feel as meaningful years from
-              now as they did in the moment.</p>
+            <h2><span>Every story deserves</span> <span class="underlight">a Golden Frame.</span> <span>Photography rooted in Kenya, made to be remembered.</span></h2>
+            <p>We capture the moments that become part of your story — from intimate portraits and family celebrations to weddings, events, and brand campaigns. Our photography brings together authentic Kenyan settings, genuine emotion, and thoughtful visual storytelling to create images that feel as meaningful years from now as they did in the moment.</p>
             <a href="contact.html" class="btn-get-started">Book a Session</a>
           </div>
         </div>
@@ -105,108 +267,104 @@
     </section><!-- /Hero Section -->
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+    <section id="gallery" class="gallery section home-gallery">
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid home-gallery-container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4 justify-content-center">
+        <div class="home-gallery-heading">
+          <div>
+            <p class="home-gallery-eyebrow">A considered collection</p>
+            <h2>Stories worth keeping.</h2>
+          </div>
+          <p>From Kenya's open landscapes to the small details that make a moment personal, here is a glimpse of the stories we love to frame.</p>
+        </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 1">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-1.jpg" title="Golden Frame Studios Portfolio — Photograph 1"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+        <div class="row gy-4 home-gallery-grid justify-content-center">
+
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <article class="home-gallery-card home-gallery-card--feature">
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=1000&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" class="img-fluid" alt="Wildlife and open landscapes of the Maasai Mara" loading="lazy">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=1000&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" title="Maasai Mara — Golden Frame Studios" class="glightbox preview-link" aria-label="Enlarge the Maasai Mara photograph"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="gallery.html" class="details-link" aria-label="Explore the full portfolio"><i class="bi bi-link-45deg"></i></a>
+                </div>
               </div>
-            </div>
+              <div class="home-gallery-caption">
+                <span>Landscapes &amp; wildlife</span>
+                <h3>A little closer to the wild.</h3>
+              </div>
+            </article>
           </div><!-- End Gallery Item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 2">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-2.jpg" title="Golden Frame Studios Portfolio — Photograph 2"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <article class="home-gallery-card home-gallery-card--feature">
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1658482782218-b0aaab8ffea3?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" class="img-fluid" alt="Kenya's coast and shoreline" loading="lazy">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="https://images.unsplash.com/photo-1658482782218-b0aaab8ffea3?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=NHwxMjA3fDA%3D" title="Kenya's Coast — Golden Frame Studios" class="glightbox preview-link" aria-label="Enlarge the Kenya coast photograph"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="gallery.html" class="details-link" aria-label="Explore the full portfolio"><i class="bi bi-link-45deg"></i></a>
+                </div>
               </div>
-            </div>
+              <div class="home-gallery-caption">
+                <span>Coast &amp; travel</span>
+                <h3>Light, land, and the Indian Ocean.</h3>
+              </div>
+            </article>
           </div><!-- End Gallery Item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 3">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-3.jpg" title="Golden Frame Studios Portfolio — Photograph 3"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <article class="home-gallery-card">
+              <div class="gallery-item">
+                <img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt="Selected Golden Frame Studios portfolio photograph" loading="lazy">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="assets/img/gallery/gallery-1.jpg" title="Selected work — Golden Frame Studios" class="glightbox preview-link" aria-label="Enlarge selected portfolio photograph"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="gallery.html" class="details-link" aria-label="Explore the full portfolio"><i class="bi bi-link-45deg"></i></a>
+                </div>
               </div>
-            </div>
+              <div class="home-gallery-caption">
+                <span>Selected work</span>
+                <h3>For the moments that matter.</h3>
+              </div>
+            </article>
           </div><!-- End Gallery Item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 4">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-4.jpg" title="Golden Frame Studios Portfolio — Photograph 4"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <article class="home-gallery-card">
+              <div class="gallery-item">
+                <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt="Selected Golden Frame Studios portfolio photograph" loading="lazy">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="assets/img/gallery/gallery-4.jpg" title="Selected work — Golden Frame Studios" class="glightbox preview-link" aria-label="Enlarge selected portfolio photograph"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="gallery.html" class="details-link" aria-label="Explore the full portfolio"><i class="bi bi-link-45deg"></i></a>
+                </div>
               </div>
-            </div>
+              <div class="home-gallery-caption">
+                <span>Details &amp; atmosphere</span>
+                <h3>The feeling is in the details.</h3>
+              </div>
+            </article>
           </div><!-- End Gallery Item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-5.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 5">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-5.jpg" title="Golden Frame Studios Portfolio — Photograph 5"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          <div class="col-xl-4 col-lg-4 col-md-6">
+            <article class="home-gallery-card">
+              <div class="gallery-item">
+                <img src="assets/img/gallery/gallery-8-2.jpg" class="img-fluid" alt="Selected Golden Frame Studios portfolio photograph" loading="lazy">
+                <div class="gallery-links d-flex align-items-center justify-content-center">
+                  <a href="assets/img/gallery/gallery-8-2.jpg" title="Selected work — Golden Frame Studios" class="glightbox preview-link" aria-label="Enlarge selected portfolio photograph"><i class="bi bi-arrows-angle-expand"></i></a>
+                  <a href="gallery.html" class="details-link" aria-label="Explore the full portfolio"><i class="bi bi-link-45deg"></i></a>
+                </div>
               </div>
-            </div>
+              <div class="home-gallery-caption">
+                <span>Selected work</span>
+                <h3>Every frame holds a story.</h3>
+              </div>
+            </article>
           </div><!-- End Gallery Item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 6">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-6.jpg" title="Golden Frame Studios Portfolio — Photograph 6"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
+        </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 7">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-7.jpg" title="Golden Frame Studios Portfolio — Photograph 7"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/gallery/gallery-8-2.jpg" class="img-fluid"
-                alt="Golden Frame Studios portfolio photograph 8">
-              <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-8-2.jpg" title="Golden Frame Studios Portfolio — Photograph 8"
-                  class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div><!-- End Gallery Item -->
-
+        <div class="home-gallery-footer">
+          <a href="gallery.html">Explore the full portfolio <i class="bi bi-arrow-up-right"></i></a>
         </div>
 
       </div>
@@ -219,8 +377,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>2026</span> <strong class="px-1 sitename">Golden Frame Studios</strong> <span>All Rights
-            Reserved</span></p>
+        <p>© <span>2026</span> <strong class="px-1 sitename">Golden Frame Studios</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="#" aria-label="Golden Frame Studios on X"><i class="bi bi-twitter-x"></i></a>
@@ -233,16 +390,14 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a
-          href="https://bootstrapmade.com/tools/">DevTools</a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader">
