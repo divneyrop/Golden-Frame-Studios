@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - PhotoFolio Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Our Story | Golden Frame Studios</title>
+  <meta name="description" content="Get to know Golden Frame Studios, a Kenyan photography brand focused on honest moments, thoughtful composition, and visual storytelling.">
+  <meta name="keywords" content="Golden Frame Studios, Kenyan photography, photography studio, visual storytelling, portraits, events">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,6 +27,408 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    body.about-page {
+      --background-color: #171714;
+      --default-color: #F4EFE6;
+      --heading-color: #FFF8EC;
+      --accent-color: #C6A15B;
+      --surface-color: #24221D;
+      --contrast-color: #171714;
+      --nav-color: rgba(244, 239, 230, 0.72);
+      --nav-hover-color: #C6A15B;
+      --nav-mobile-background-color: #24221D;
+      --nav-dropdown-background-color: #24221D;
+      --nav-dropdown-color: #F4EFE6;
+      --nav-dropdown-hover-color: #C6A15B;
+      background: var(--background-color);
+      color: var(--default-color);
+      font-family: "Inter", sans-serif;
+    }
+
+    .about-page h1,
+    .about-page h2,
+    .about-page h3,
+    .about-page .sitename {
+      font-family: "Cardo", Georgia, serif;
+    }
+
+    .about-page .header {
+      background: rgba(23, 23, 20, 0.96);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.16);
+    }
+
+    .about-page .logo i,
+    .about-page .header-social-links a:hover,
+    .about-page .navmenu a.active,
+    .about-page .navmenu a:hover {
+      color: var(--accent-color);
+    }
+
+    .about-page .logo .sitename {
+      font-size: 1.45rem;
+      letter-spacing: 0.01em;
+    }
+
+    .about-page .navmenu a {
+      font-family: "Inter", sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .about-page .story-booking-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0.35rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid rgba(198, 161, 91, 0.75);
+      color: var(--heading-color);
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .about-page .story-booking-link:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    .about-page .story-page-title {
+      padding: 4.5rem 0 0;
+      background: radial-gradient(ellipse at top, rgba(198, 161, 91, 0.08), transparent 62%);
+    }
+
+    .about-page .story-page-title .heading {
+      padding: 0 0 3.6rem;
+    }
+
+    .about-page .story-eyebrow,
+    .about-page .section-eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .about-page .story-page-title h1 {
+      margin-bottom: 1rem;
+      color: var(--heading-color);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.04;
+    }
+
+    .about-page .story-page-title .story-lead {
+      max-width: 700px;
+      margin: 0 auto 1.6rem;
+      color: rgba(244, 239, 230, 0.78);
+      font-size: clamp(1rem, 1.6vw, 1.16rem);
+      line-height: 1.9;
+    }
+
+    .about-page .story-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.25rem;
+      border: 1px solid var(--accent-color);
+      color: var(--heading-color);
+      font-size: 0.86rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .about-page .story-hero-cta:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    .about-page .breadcrumbs {
+      border-top: 1px solid rgba(244, 239, 230, 0.08);
+    }
+
+    .about-page .breadcrumbs a {
+      color: rgba(244, 239, 230, 0.68);
+    }
+
+    .about-page .breadcrumbs .current {
+      color: var(--accent-color);
+    }
+
+    .about-page .story-intro {
+      padding: 5rem 0 4.5rem;
+    }
+
+    .about-page .story-image-wrap {
+      position: relative;
+      max-width: 470px;
+      margin: 0 auto;
+      padding: 0 1rem 1rem 0;
+    }
+
+    .about-page .story-image-wrap::before {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      bottom: 0;
+      width: 74%;
+      height: 68%;
+      border-right: 1px solid var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+      content: "";
+    }
+
+    .about-page .story-main-image {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      background: var(--surface-color);
+      filter: saturate(0.86);
+    }
+
+    .about-page .story-image-caption {
+      position: absolute;
+      z-index: 2;
+      right: -0.5rem;
+      bottom: 2rem;
+      max-width: 205px;
+      padding: 1rem 1.1rem;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      font-family: "Cardo", Georgia, serif;
+      font-size: 1.08rem;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    .about-page .story-copy {
+      padding: 0.75rem 0 0 1.5rem;
+    }
+
+    .about-page .story-copy h2 {
+      max-width: 620px;
+      margin-bottom: 1.2rem;
+      color: var(--heading-color);
+      font-size: clamp(2rem, 3.2vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    .about-page .story-copy p {
+      color: rgba(244, 239, 230, 0.78);
+      line-height: 1.9;
+    }
+
+    .about-page .story-copy .story-opening {
+      color: var(--heading-color);
+      font-family: "Cardo", Georgia, serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .about-page .story-pillars {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .about-page .story-pillar {
+      padding: 1.1rem 1.15rem;
+      border: 1px solid rgba(198, 161, 91, 0.22);
+      background: rgba(36, 34, 29, 0.62);
+    }
+
+    .about-page .story-pillar i {
+      display: inline-block;
+      margin-bottom: 0.65rem;
+      color: var(--accent-color);
+      font-size: 1.25rem;
+    }
+
+    .about-page .story-pillar h3 {
+      margin-bottom: 0.4rem;
+      color: var(--heading-color);
+      font-size: 1.16rem;
+    }
+
+    .about-page .story-pillar p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .about-page .testimonials {
+      padding: 4.75rem 0 5.25rem;
+      background: #11110F;
+      border-top: 1px solid rgba(198, 161, 91, 0.16);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.16);
+    }
+
+    .about-page .story-section-title {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+    .about-page .story-section-title h2 {
+      margin-bottom: 0.7rem;
+      color: var(--heading-color);
+      font-size: clamp(2rem, 3.3vw, 3rem);
+    }
+
+    .about-page .story-section-title p {
+      color: rgba(244, 239, 230, 0.7);
+      line-height: 1.8;
+    }
+
+    .about-page .story-principle-card {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(198, 161, 91, 0.2);
+      background: var(--surface-color);
+    }
+
+    .about-page .story-principle-image {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      filter: saturate(0.78);
+    }
+
+    .about-page .story-principle-copy {
+      padding: 1.35rem 1.35rem 1.5rem;
+    }
+
+    .about-page .story-principle-copy .principle-number {
+      display: block;
+      margin-bottom: 0.65rem;
+      color: var(--accent-color);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .about-page .story-principle-copy h3 {
+      margin-bottom: 0.6rem;
+      color: var(--heading-color);
+      font-size: 1.45rem;
+    }
+
+    .about-page .story-principle-copy p {
+      margin: 0;
+      color: rgba(244, 239, 230, 0.73);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .about-page .swiper-pagination {
+      position: relative;
+      margin-top: 1.8rem;
+    }
+
+    .about-page .swiper-pagination .swiper-pagination-bullet {
+      background: rgba(244, 239, 230, 0.42);
+      opacity: 1;
+    }
+
+    .about-page .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--accent-color);
+    }
+
+    .about-page .story-closing {
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .about-page .story-closing-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3.25rem 2rem;
+      border: 1px solid rgba(198, 161, 91, 0.32);
+      background: linear-gradient(135deg, rgba(198, 161, 91, 0.08), rgba(36, 34, 29, 0.72));
+    }
+
+    .about-page .story-closing h2 {
+      margin-bottom: 0.9rem;
+      color: var(--heading-color);
+      font-size: clamp(2rem, 4vw, 3.3rem);
+    }
+
+    .about-page .story-closing p {
+      max-width: 610px;
+      margin: 0 auto 1.6rem;
+      color: rgba(244, 239, 230, 0.76);
+      line-height: 1.9;
+    }
+
+    .about-page .footer {
+      border-top: 1px solid rgba(198, 161, 91, 0.16);
+      background: #11110F;
+    }
+
+    .about-page .footer .sitename {
+      color: var(--heading-color);
+    }
+
+    .about-page .footer a:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 991px) {
+      .about-page .header-social-links {
+        display: none;
+      }
+
+      .about-page .story-copy {
+        padding: 1.75rem 0 0;
+      }
+
+      .about-page .story-intro {
+        padding: 4rem 0;
+      }
+
+      .about-page .story-main-image {
+        min-height: 410px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .about-page .story-page-title {
+        padding-top: 3rem;
+      }
+
+      .about-page .story-page-title .heading {
+        padding-bottom: 2.5rem;
+      }
+
+      .about-page .story-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .about-page .story-main-image {
+        min-height: 340px;
+      }
+
+      .about-page .story-image-caption {
+        right: 0;
+        bottom: 1.5rem;
+        max-width: 175px;
+        font-size: 0.98rem;
+      }
+
+      .about-page .story-closing-inner {
+        padding: 2.25rem 1.2rem;
+      }
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: PhotoFolio
   * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
@@ -45,43 +447,25 @@
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <i class="bi bi-camera"></i>
-        <h1 class="sitename">PhotoFolio</h1>
+        <h1 class="sitename">Golden Frame Studios</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li class="dropdown"><a href="gallery.html"><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="gallery.html">Nature</a></li>
-              <li><a href="gallery.html">People</a></li>
-              <li><a href="gallery.html">Architecture</a></li>
-              <li><a href="gallery.html">Animals</a></li>
-              <li><a href="gallery.html">Sports</a></li>
-              <li><a href="gallery.html">Travel</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">Our Story</a></li>
+          <li><a href="gallery.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="story-booking-link">Book a Session</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="twitter" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -90,14 +474,15 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
+    <div class="page-title story-page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>About</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-              <a href="contact.html" class="cta-btn">Available for Hire<br></a>
+            <div class="col-lg-9">
+              <span class="story-eyebrow">Golden Frame Studios · Kenya</span>
+              <h1>Our Story</h1>
+              <p class="story-lead">The best photographs do more than show how a moment looked. They bring you back to how it felt.</p>
+              <a href="contact.html" class="story-hero-cta">Let's tell your story <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </div>
         </div>
@@ -106,71 +491,65 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
+            <li class="current">Our Story</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
-
+    <section id="about" class="about section story-intro">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="story-image-wrap">
+              <img src="assets/img/profile-img.jpg" class="img-fluid story-main-image" alt="Portrait from the Golden Frame Studios photography collection">
+              <div class="story-image-caption">Thoughtfully captured. Beautifully kept.</div>
+            </div>
           </div>
-          <div class="col-lg-5 content">
-            <h2>UI/UX DesiProfessional Photographer from New Yorkgner &amp; Web Developer.</h2>
-            <p class="fst-italic py-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                </ul>
+          <div class="col-lg-7 content story-copy">
+            <span class="section-eyebrow">The heart behind the frame</span>
+            <h2>Photography with feeling, intention, and a sense of place.</h2>
+            <p class="story-opening">Golden Frame Studios is built around a simple belief: the moments that matter most deserve to be remembered with care.</p>
+            <p>Rooted in Kenya and inspired by the people, places, and everyday details around us, we approach photography as a way of preserving more than appearances. A celebration is about the people in the room. A portrait is about the person behind the pose. A brand image is about the idea and the people bringing it to life.</p>
+            <p>Our role is to listen, notice what makes each story its own, and create photographs that feel considered without losing their honesty. Whether the moment is carefully planned or unfolds on its own, we want the final images to feel true to you.</p>
+
+            <div class="story-pillars">
+              <div class="story-pillar">
+                <i class="bi bi-chat-heart" aria-hidden="true"></i>
+                <h3>People first</h3>
+                <p>We begin with your ideas, priorities, and the feeling you want to hold on to.</p>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+              <div class="story-pillar">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                <h3>Grounded in place</h3>
+                <p>We make room for the atmosphere, character, and details that give each setting meaning.</p>
+              </div>
+              <div class="story-pillar">
+                <i class="bi bi-camera" aria-hidden="true"></i>
+                <h3>Thoughtful craft</h3>
+                <p>From composition to the final selection, every frame has a reason to be there.</p>
+              </div>
+              <div class="story-pillar">
+                <i class="bi bi-hourglass-split" aria-hidden="true"></i>
+                <h3>Made to last</h3>
+                <p>We aim for images that remain meaningful long after the day has passed.</p>
               </div>
             </div>
-            <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
-            <p class="m-0">
-              Recusandae est praesentium consequatur eos voluptatem. Vitae dolores aliquam itaque odio nihil. Neque ut neque ut quae voluptas. Maxime corporis aut ut ipsum consequatur. Repudiandae sunt sequi minus qui et. Doloribus molestiae officiis.
-              Soluta eligendi fugiat omnis enim. Numquam alias sint possimus eveniet ad. Ratione in earum eum magni totam.
-            </p>
           </div>
         </div>
-
       </div>
-
     </section><!-- /About Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>What they are saying</p>
+      <div class="container story-section-title" data-aos="fade-up">
+        <span class="section-eyebrow">A considered approach</span>
+        <h2>What guides our work</h2>
+        <p>Every shoot is different, but the way we approach it stays grounded in the same principles.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
@@ -188,11 +567,15 @@
               "breakpoints": {
                 "320": {
                   "slidesPerView": 1,
-                  "spaceBetween": 40
+                  "spaceBetween": 20
+                },
+                "768": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
                 },
                 "1200": {
                   "slidesPerView": 3,
-                  "spaceBetween": 1
+                  "spaceBetween": 22
                 }
               }
             }
@@ -200,100 +583,84 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <article class="story-principle-card">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="story-principle-image" alt="Portrait image from the existing studio template">
+                <div class="story-principle-copy">
+                  <span class="principle-number">01 / LISTEN</span>
+                  <h3>Start with the story</h3>
+                  <p>We take time to understand what matters to you before deciding how to frame it.</p>
                 </div>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
+              </article>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <article class="story-principle-card">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="story-principle-image" alt="Portrait image from the existing studio template">
+                <div class="story-principle-copy">
+                  <span class="principle-number">02 / CONNECT</span>
+                  <h3>Keep it human</h3>
+                  <p>We make room for genuine expressions and small, unscripted moments.</p>
                 </div>
-                <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
+              </article>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <article class="story-principle-card">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="story-principle-image" alt="Portrait image from the existing studio template">
+                <div class="story-principle-copy">
+                  <span class="principle-number">03 / NOTICE</span>
+                  <h3>Look a little closer</h3>
+                  <p>Expressions, textures, gestures, and in-between details often hold the memory.</p>
                 </div>
-                <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
-              </div>
+              </article>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <article class="story-principle-card">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="story-principle-image" alt="Portrait image from the existing studio template">
+                <div class="story-principle-copy">
+                  <span class="principle-number">04 / RESPECT</span>
+                  <h3>Honor the setting</h3>
+                  <p>We pay attention to the character of a place and the people who give it life.</p>
                 </div>
-                <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
+              </article>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <article class="story-principle-card">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="story-principle-image" alt="Portrait image from the existing studio template">
+                <div class="story-principle-copy">
+                  <span class="principle-number">05 / REFINE</span>
+                  <h3>Finish with care</h3>
+                  <p>We want the final collection to feel cohesive, personal, and worth returning to.</p>
                 </div>
-                <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
+              </article>
             </div><!-- End testimonial item -->
 
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
       </div>
-
     </section><!-- /Testimonials Section -->
+
+    <section class="story-closing section" aria-labelledby="story-closing-title">
+      <div class="container" data-aos="fade-up">
+        <div class="story-closing-inner">
+          <span class="section-eyebrow">Your story, your way</span>
+          <h2 id="story-closing-title">Have a moment in mind?</h2>
+          <p>Tell us what you're planning, what you're celebrating, or what you'd like to create. We'll take it from there, one thoughtful frame at a time.</p>
+          <a href="contact.html" class="story-hero-cta">Book a Session <i class="bi bi-arrow-up-right"></i></a>
+          <a href="gallery.html" class="story-hero-cta">Explore the Portfolio <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <footer id="footer" class="footer">
-
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">PhotoFolio</strong> <span>All Rights Reserved</span></p>
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Golden Frame Studios</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -309,7 +676,6 @@
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
